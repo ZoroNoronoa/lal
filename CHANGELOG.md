@@ -1,3 +1,5 @@
+# CHANGELOG
+
 #### v0.37.4 (2024-04)
 
 - [feat] 支持opus音频编码
@@ -101,7 +103,7 @@
 
 #### v0.32.0 (2022-11-10)
 
-- [feat] 自动叠加静音音频。所有协议、所有类型的输入流都已支持，文档见: https://pengrl.com/lal/#/dummy_audio
+- [feat] 自动叠加静音音频。所有协议、所有类型的输入流都已支持，文档见: <https://pengrl.com/lal/#/dummy_audio>
 - [feat] 支持rtmps、rtsps(server端)
 - [feat] rtp: 支持解析rtp header中的padding和csrc
 - [feat] demo: pullhttpflv拉取http-flv时可以存储为flv文件
@@ -113,7 +115,7 @@
 - [fix] http-api: 修复sub http-flv remote_addr字段没有值的bug
 - [fix] rtsp: 修复auth可能失败的bug
 - [log] 打印rtsp信令。丰富多处错误日志，比如转hls异常
-- [doc] 新增文档：重要概念 https://pengrl.com/lal/#/concept
+- [doc] 新增文档：重要概念 <https://pengrl.com/lal/#/concept>
 
 #### v0.31.1 (2022-10-07)
 
@@ -170,7 +172,7 @@
 
 #### v0.29.1 (2022-05-03)
 
-- [feat] lalserver: 支持集成第三方协议的输入流 https://pengrl.com/#/customize_pub
+- [feat] lalserver: 支持集成第三方协议的输入流 <https://pengrl.com/#/customize_pub>
 - [feat] rtmp: pull session增加ack应答，提高兼容性
 - [opt] rtsp: lalserver增加配置项`rtsp->out_wait_key_frame_flag`，用于控制发送rtsp数据时，是否等待关键帧再发送
 - [opt] 增强健壮性，检查rtmp消息长度有效性
@@ -205,7 +207,7 @@
 
 #### v0.27.1 (2022-01-23)
 
-- [feat] 新增simple auth鉴权功能，见文档： https://pengrl.com/lal/#/auth
+- [feat] 新增simple auth鉴权功能，见文档： <https://pengrl.com/lal/#/auth>
 - [feat] httpflv: PullSession支持https，支持302跳转
 - [feat] rtmp: client类型的session新增方法用于配置WriteBuf和ReadBuf大小，以及WriteChanSize
 - [opt] rtmp: 收到ping request回应ping response
@@ -301,9 +303,9 @@
 
 #### v0.22.0 (2021-05-03)
 
-- [feat] 录制新增支持：flv和mpegts文件。 录制支持列表见： https://pengrl.com/lal/#/LALServer (#14)
-- [feat] h265新增支持： hls拉流，hls录制；http-ts拉流，mpegts录制。h265支持列表见： https://pengrl.com/lal/#/LALServer (#65)
-- [feat] 拉流新增支持：websocket-flv，websocket-ts。拉流协议支持列表见： https://pengrl.com/lal/#/LALServer
+- [feat] 录制新增支持：flv和mpegts文件。 录制支持列表见： <https://pengrl.com/lal/#/LALServer> (#14)
+- [feat] h265新增支持： hls拉流，hls录制；http-ts拉流，mpegts录制。h265支持列表见： <https://pengrl.com/lal/#/LALServer> (#65)
+- [feat] 拉流新增支持：websocket-flv，websocket-ts。拉流协议支持列表见： <https://pengrl.com/lal/#/LALServer>
 - [feat] hls: 支持内存切片。 (#50)
 - [fix] rtmp ClientSession握手，c2的发送时机，由收到s0s1s2改为收到s0s1就发送，解决握手失败的case。 (#42)
 - [fix] rtsp h265: 转rtmp时处理错误导致无法播放
@@ -314,14 +316,14 @@
 #### v0.21.0 (2021-04-11)
 
 - [feat] package rtmp: 支持Aggregate Message
-- [feat] lalserver: 新增配置项hls.cleanup_mode，支持三种清理hls文件的模式，具体说明见 https://pengrl.com/lal/#/ConfigBrief
+- [feat] lalserver: 新增配置项hls.cleanup_mode，支持三种清理hls文件的模式，具体说明见 <https://pengrl.com/lal/#/ConfigBrief>
 - [feat] package rtsp: 支持aac fragment格式（一个音频帧被拆分成多个rtp包），之前这种aac格式可能导致崩溃
-- [doc] 新增文章《rtmp中的各种ID》，见 https://pengrl.com/lal/#/RTMPID
-- [doc] 新增文章《rtmp handshake握手之简单模式和复杂模式》，见 https://pengrl.com/lal/#/RTMPHandshake
+- [doc] 新增文章《rtmp中的各种ID》，见 <https://pengrl.com/lal/#/RTMPID>
+- [doc] 新增文章《rtmp handshake握手之简单模式和复杂模式》，见 <https://pengrl.com/lal/#/RTMPHandshake>
 - [fix] rtsp推流时，rtp包时间戳翻转导致的错误（比如长时间推流后hls一直强制切片）
 - [fix] lalserver的group中，rtsp sub超时时，锁重入导致服务器异常阻塞不响应
 - [fix] 修复mipsle架构下rtsp崩溃
-- [fix] 修复lalserver中（rtsp.BaseInSession以及logic.Group）的一些竞态读写，https://github.com/q191201771/lal/issues/47
+- [fix] 修复lalserver中（rtsp.BaseInSession以及logic.Group）的一些竞态读写，<https://github.com/q191201771/lal/issues/47>
 - [fix] demo: 两个拉httpflv流的demo，main函数退出前忘记等待拉流结束
 - [refactor] package rtprtcp: 重构一些函数名
 - [refactor] package rtprtcp: 重构rtp unpacker，业务方可以使用默认的container，protocol策略，也可以自己实现特定的协议解析组包策略
@@ -337,7 +339,7 @@
 - [fix] 修复32位arm环境使用rtsp崩溃
 - [refactor] 统一各Session接口
 - [refactor] 使用新的unique id生成器，提高性能
-- [doc] 新增文档 ffplay播放rtsp花屏 https://pengrl.com/lal/#/RTSPFFPlayBlur
+- [doc] 新增文档 ffplay播放rtsp花屏 <https://pengrl.com/lal/#/RTSPFFPlayBlur>
 
 #### v0.19.1 (2021-02-01)
 
@@ -362,8 +364,8 @@
 - [refactor] rtsp，新增ClientCommandSession，将PushSession和PullSession中共用的信令部分抽离出来
 - [refactor] rtsp，新增BaseOutSession，将PushSession和SubSession中共用的发送数据部分抽离出来
 - [refactor] rtsp，整理所有session，包含生命周期，ISessionStat、IURLContext、Interleaved收发等函数，整理debug日志
-- [doc] 启动lal官方文档页： https://pengrl.com/lal
-- [doc] 新增文档《rtmp url，以及vhost》： http://pengrl.com/lal/#/RTMPURLVhost
+- [doc] 启动lal官方文档页： <https://pengrl.com/lal>
+- [doc] 新增文档《rtmp url，以及vhost》： <http://pengrl.com/lal/#/RTMPURLVhost>
 - [chore] Go最低版本要求从1.9上升到1.13
 
 #### v0.18.0 (2020-12-27)
@@ -391,7 +393,7 @@
 
 #### v0.17.0 (2020-11-21)
 
-- [feat] 增加HTTP Notify事件回调功能，见 https://pengrl.com/p/20101
+- [feat] 增加HTTP Notify事件回调功能，见 <https://pengrl.com/p/20101>
 - [feat] 增加`/app/demo/dispatch`示例程序，用于演示如何结合HTTP Notify加HTTP API构架一个lalserver集群
 - [feat] 配置文件中增加配置项，支持配置是否清除过期流的HLS文件
 - [feat] lalserver的session增加存活检查，10秒没有数据会主动断开连接
@@ -406,7 +408,7 @@
 #### v0.16.0 (2020-10-23)
 
 - [feat] rtsp pub h265（lal支持接收rtsp h265视频格式的推流）
-- [feat] 增加HTTP API接口，用于获取服务的一些信息，具体见： https://pengrl.com/p/20100/
+- [feat] 增加HTTP API接口，用于获取服务的一些信息，具体见： <https://pengrl.com/p/20100/>
 - [fix] 修复部分使用adobe flash player作为rtmp拉流客户端，拉流失败的问题
 - [fix] 修复接收rtsp pub推流时，流只有视频（没有音频）流处理的问题
 
@@ -442,7 +444,7 @@
 - [feat] package rtmp: 增加BuildMetadata函数
 - [test] 使用wontcry30s.flv作为单元测试用的音视频文件
 - [chore] 使用Makefile管理build, test
-- [doc] 增加文档: https://pengrl.com/p/20080/
+- [doc] 增加文档: <https://pengrl.com/p/20080/>
 - [log] 整理所有session的日志
 
 #### v0.13.0 (2020-07-18)
@@ -539,21 +541,21 @@
 #### v0.5.0 (2019-11-01)
 
 - package rtmp:
-    - 增加结构体 ClientSessionOption，PushSessionOption，PullSessionOption
-    - 增加结构体 AVMsg
-    - ClientSession 作为 PushSession 和 PullSession 的私有成员
-    - 将绝对时间戳移入到 Header 结构体中
-    - PullSession::Pull OnReadAVMsg with AVMsg
-    - AVMsgObserver::ReadRTMPAVMsgCB -> OnReadRTMPAVMsg
+  - 增加结构体 ClientSessionOption，PushSessionOption，PullSessionOption
+  - 增加结构体 AVMsg
+  - ClientSession 作为 PushSession 和 PullSession 的私有成员
+  - 将绝对时间戳移入到 Header 结构体中
+  - PullSession::Pull OnReadAVMsg with AVMsg
+  - AVMsgObserver::ReadRTMPAVMsgCB -> OnReadRTMPAVMsg
 - package httpflv:
-    - PullSessionOption
-    - OnReadFLVTag
-    - some func use Tag instead of *Tag
-    - 整个包的代码做了一次整理
-    - FlvFileReader 在 ReadTag 中懒读取 flv header
+  - PullSessionOption
+  - OnReadFLVTag
+  - some func use Tag instead of *Tag
+  - 整个包的代码做了一次整理
+  - FlvFileReader 在 ReadTag 中懒读取 flv header
 - package logic:
-    - 使用 rtmp.AVMsg
-    - 增加两个函数 MakeDefaultRTMPHeader，FLVTagHeader2RTMPHeader
+  - 使用 rtmp.AVMsg
+  - 增加两个函数 MakeDefaultRTMPHeader，FLVTagHeader2RTMPHeader
 
 #### v0.4.0 (2019-10-25)
 
