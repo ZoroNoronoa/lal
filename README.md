@@ -51,13 +51,13 @@ LAL could also be built from the source wherever the Go compiler toolchain can r
 
 option 1, using prebuilt image at docker hub, so just run:
 
-```
+```bash
 $docker run -it -p 1935:1935 -p 8080:8080 -p 4433:4433 -p 5544:5544 -p 8083:8083 -p 8084:8084 -p 30000-30100:30000-30100/udp q191201771/lal /lal/bin/lalserver -c /lal/conf/lalserver.conf.json
 ```
 
 option 2, build from local source with Dockerfile, and run:
 
-```
+```bash
 $git clone https://github.com/q191201771/lal.git
 $cd lal
 $docker build -t lal .
@@ -101,7 +101,7 @@ docker-compose up -d
 
 Running lalserver:
 
-```
+```bash
 $./bin/lalserver -c ./conf/lalserver.conf.json
 ```
 
@@ -132,7 +132,6 @@ Besides a live stream broadcast server which named `lalserver` precisely, `proje
 Our goals are not only a production server but also a simple package with a well-defined, user-facing API, so that users can build their own applications on it.
 
 `LAL` stands for `Live And Live` if you may wonder.
-
 
 ## Contact
 
